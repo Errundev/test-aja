@@ -6,14 +6,17 @@ const rl = readline.createInterface({
 });
 
 console.log("=== Kalkulator Sederhana ===");
-console.log("create by errdev")
 
 rl.question("Masukkan angka pertama: ", (num1) => {
     rl.question("Masukkan operator (+, -, *, /): ", (operator) => {
         rl.question("Masukkan angka kedua: ", (num2) => {
-
-            num1 = parseFloat(num1);
             num2 = parseFloat(num2);
+
+            if (num2 === NaN) {
+                console.log("Error: Input kedua bukan angka.");
+                rl.close();
+                return;
+            }
 
             let hasil;
 
@@ -22,7 +25,7 @@ rl.question("Masukkan angka pertama: ", (num1) => {
                     hasil = num1 + num2;
                     break;
                 case "-":
-                    hasil = num1 - num2;
+                    hasill = num1 - num2;
                     break;
                 case "*":
                     hasil = num1 * num2;
@@ -30,7 +33,6 @@ rl.question("Masukkan angka pertama: ", (num1) => {
                 case "/":
                     if (num2 === 0) {
                         console.log("Error: Tidak bisa membagi dengan nol.");
-                        rl.close();
                         return;
                     }
                     hasil = num1 / num2;
@@ -41,7 +43,8 @@ rl.question("Masukkan angka pertama: ", (num1) => {
                     return;
             }
 
-            console.log(`Hasil: ${hasil}`);
+            console.log('Hasil: ${hasil}');
+            
             rl.close();
         });
     });
