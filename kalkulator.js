@@ -41,7 +41,7 @@ rl.question("Masukkan angka pertama: ", (num1) => {
             }
 
             console.log(`Hasil: ${hasil}`);
-            console.log(Terima kasih);
+            console.log("Terima kasih");
             rl.close();
         });
     });
