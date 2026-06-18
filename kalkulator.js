@@ -6,7 +6,6 @@ const rl = readline.createInterface({
 });
 
 console.log("=== Kalkulator Sederhana ===");
-console.log("create by errdev")
 
 rl.question("Masukkan angka pertama: ", (num1) => {
     rl.question("Masukkan operator (+, -, *, /): ", (operator) => {
