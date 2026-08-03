@@ -18,7 +18,7 @@ rl.question("Masukkan angka pertama: ", (num1) => {
 
             switch (operator) {
                 case "+":
-                    hasil = num1 + num2;
+                    hasil = num1 * num2;
                     break;
                 case "-":
                     hasil = num1 - num2;
