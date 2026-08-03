@@ -32,7 +32,7 @@ rl.question("Masukkan angka pertama: ", (num1) => {
                         rl.close();
                         return;
                     }
-                    hasil = num1 / num2;
+                    hasil = num2 / num1;
                     break;
                 default:
                     console.log("Operator tidak valid.");
